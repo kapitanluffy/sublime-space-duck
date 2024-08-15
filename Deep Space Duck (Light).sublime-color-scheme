@@ -1,0 +1,809 @@
+{
+    "name": "Deep Space Duck",
+    "author": "kapitanluffy",
+    "variables": {
+        /* Color Palette */
+        "red":   "#e33400",
+        "orange": "#e39400",
+        "green": "#5ccc96",
+        "yellow":"#f2ce00",
+        "purple":"#b3a1e6",
+        "purple2":"#7a5ccc",
+        "darkpurple":"#30365F",
+        "darkpurple2":"#686f9a",
+        "cyan":  "#00a3cc",
+        "magenta":  "#ce6f8f",
+        "background": "#0f111b",
+        "foreground": "#ecf0c1",
+        "visual-selection": "#1b1c36",
+        "cursor-line": "#16172d",
+        "grey": "#818596",
+        "grey2": "#c1c3cc",
+        "white": "#ffffff",
+        "black": "#000000",
+
+        /* Generic Rules */
+
+        // Variable usage
+        "variable-color": "var(foreground)",
+        // Function usage
+        "function-color": "var(green)",
+        // Function parameters
+        "function-params-color": "var(variable-color)",
+        // Language Reserved
+        "language-reserved-variable-color": "color(var(yellow) l(+ 20%))",
+        // Class members or properties
+        "class-members-color": "var(variable-color)",
+        // Annotations
+        "annotation-color": "color(var(green) l(+ 15%))",
+        // Comments
+        "comment-color": "var(darkpurple2)",
+        // Constants
+        "constant-color": "var(yellow)",
+        // Placeholder (sprintf("%s"))
+        "placeholder-color": "var(yellow)",
+        // Character Escape ("\n")
+        "character-escape-color": "var(yellow)",
+        // Strings
+        "string-color": "color(var(cyan) l(+ 20%))",
+        // String Quotes
+        "quotes-color": "color(var(cyan) l(+ 40%))",
+        // Regex
+        "regexp-color": "var(orange)",
+        // Multi-line Strings
+        "multi-line-string-color": "color(var(cyan) l(+ 5%))",
+        // Numbers
+        "number-color": "color(var(magenta) l(+ 5%))",
+        // Punctuations
+        "punctuation-color": "var(white)",
+        // Separator
+        "separator-color": "var(darkpurple2)",
+        // Accessor
+        "accessor-color": "var(separator-color)",
+        // Terminator
+        "terminator-color": "var(separator-color)",
+        // String Interpolation Symbols
+        "interpolation-color": "var(purple)",
+        // String Continuation
+        "continuation-color": "var(interpolation-color)",
+        // Brackets
+        "bracket-color": "color(var(yellow) l(+ 35%))",
+        // Special Symbols ($variable, @annotation)
+        "definition-symbol-color": "color(var(orange) l(+ 10%))",
+        // Operators
+        "operator-color": "var(purple)",
+        // Word Operators
+        "operator-word-color": "var(orange)",
+        // Generic Keyword Color
+        "keyword-color": "var(purple)",
+        // Conditionals, Loops, Exceptions
+        "keyword-control-color": "var(purple)",
+        // Control Flow
+        "keyword-flow-color": "var(purple2)",
+        // Imports
+        "keyword-import-color": "var(keyword-color)",
+        // Declaration keywords (func, def)
+        "keyword-declaration-color": "var(cyan)",
+        // Data Type keywords (int, char)
+        "data-type-color": "color(var(orange) l(+ 20%))",
+        // Access keywords (public, static)
+        "storage-modifier-color": "var(purple)",
+        // Frameworks & Libraries
+        "support-color": "var(yellow)",
+        // Frameworks & Libraries constants
+        "support-constant-color": "var(constant-color)",
+        // Frameworks & Libraries functions
+        "support-function-color": "var(function-color)",
+        // Frameworks & Libraries types
+        "support-type-color": "var(data-type-color)",
+        // Frameworks & Libraries classes
+        "support-class-color": "var(entity-color)",
+        // HTML & XML text
+        "xml-text-color": "var(foreground)",
+        // HTML & XML tags
+        "xml-tag-color": "var(green)",
+        // HTML & XML attributes
+        "xml-attribute-color": "var(orange)",
+        // Inherited/Implemented classes or interfaces
+        "inherited-class-color": "color(var(foreground) a(0.8))",
+        // Markdown heading
+        "markup-heading-color": "var(cyan)",
+        // Structure "Entities" (class, struct, enum, interface, trait)
+        "entity-color": "var(foreground)",
+        // Function "Entities"
+        "entity-function-color": "var(function-color)",
+        // Variable "Entities"
+        "entity-variable-color": "var(magenta)",
+
+        /* Fine Rules */
+
+        "comment": "var(comment-color)",
+        "comment-line": "var(comment)",
+        "comment-block": "var(comment)",
+        "comment-block-documentation": "var(comment)",
+
+        "constant": "var(constant-color)",
+        "constant-numeric": "var(number-color)",
+        "constant-language": "var(constant)",
+        "constant-character-escape": "var(character-escape-color)",
+        "constant-other-placeholder": "var(placeholder-color)",
+        "constant-other": "var(constant)",
+
+        "entity-name": "var(entity-color)",
+        "entity-name-class": "var(entity-name)",
+        "entity-name-type": "var(data-type-color)",
+        "entity-name-variable": "var(entity-variable-color)",
+        "entity-name-function": "var(entity-function-color)",
+        "entity-name-function-constructor": "var(entity-name-function)",
+        "entity-name-function-destructor": "var(entity-name-function)",
+        "entity-name-namespace": "var(entity-name)",
+        "entity-name-constant": "var(constant)",
+        "entity-name-label": "var(entity-name)",
+        "entity-name-section": "var(markup-heading-color)",
+        "entity-name-tag": "var(xml-tag-color)",
+        "entity-other-inherited-class": "var(inherited-class-color)",
+        "entity-other-attribute-name": "var(xml-attribute-color)",
+
+        "invalid": "var(red)",
+        "invalid-illegal": "var(invalid)",
+        "invalid-deprecated": "var(invalid)",
+
+        "keyword": "var(keyword-color)",
+        "keyword-control": "var(keyword)",
+        "keyword-control-conditional": "var(keyword-control-color)",
+        "keyword-control-exception": "var(keyword-control-color)",
+        "keyword-control-loop": "var(keyword-control-color)",
+        "keyword-control-import": "var(keyword-import-color)",
+        "keyword-control-flow": "var(keyword-flow-color)",
+        "keyword-other": "var(keyword)",
+        "keyword-operator": "var(operator-color)",
+        "keyword-operator-word": "var(operator-word-color)",
+        "keyword-declaration": "var(keyword-declaration-color)",
+
+        "markup": "var(foreground)",
+        "markup-heading": "var(markup)",
+        "markup-list": "var(markup)",
+        "markup-bold": "var(markup)",
+        "markup-italic": "var(markup)",
+        "markup-underline": "var(markup)",
+        "markup-underline-link": "var(markup)",
+        "markup-inserted": "var(markup)",
+        "markup-deleted": "var(markup)",
+        "markup-quote": "var(markup)",
+        "markup-raw": "var(markup)",
+        "markup-other": "var(markup)",
+
+        "punctuation": "var(punctuation-color)",
+        "punctuation-separator": "var(separator-color)",
+        "punctuation-separator-continuation": "var(continuation-color)",
+        "punctuation-terminator": "var(terminator-color)",
+        "punctuation-accessor": "var(accessor-color)",
+        "punctuation-definition-annotation": "var(definition-symbol-color)",
+        "punctuation-definition-comment": "var(comment)",
+        "punctuation-definition-generic": "var(punctuation)",
+        "punctuation-definition-keyword": "var(punctuation)",
+        "punctuation-definition-string": "var(quotes-color)",
+        "punctuation-definition-variable": "var(definition-symbol-color)",
+        "punctuation-definition-constant": "var(punctuation-definition-variable)",
+        "punctuation-section": "var(bracket-color)",
+        "punctuation-section-braces": "var(bracket-color)",
+        "punctuation-section-brackets": "var(bracket-color)",
+        "punctuation-section-parens": "var(bracket-color)",
+        "punctuation-section-interpolation": "var(interpolation-color)",
+
+        "storage-type": "var(data-type-color)",
+        "storage-modifier": "var(storage-modifier-color)",
+
+        "string": "var(string-color)",
+        "string-quoted": "var(string)",
+        "string-quoted-single": "var(string)",
+        "string-quoted-double": "var(string)",
+        "string-quoted-triple": "var(multi-line-string-color)",
+        "string-quoted-other": "var(string)",
+        "string-unquoted": "var(string)",
+        "string-regexp": "var(regexp-color)",
+
+        "support": "var(support-color)",
+        "support-constant": "var(support-constant-color)",
+        "support-function": "var(support-function-color)",
+        "support-module": "var(support)",
+        "support-type": "var(support-type-color)",
+        "support-class": "var(support-class-color)",
+
+        "text": "var(xml-text-color)",
+        "text-html": "var(text)",
+        "text-xml": "var(text)",
+
+        "variable": "var(variable-color)",
+        "variable-other": "var(variable)",
+        "variable-other-constant": "var(constant)",
+        "variable-other-member": "var(class-members-color)",
+        "variable-language": "var(language-reserved-variable-color)",
+        "variable-parameter": "var(function-params-color)",
+        "variable-function": "var(function-color)",
+        "variable-annotation": "var(annotation-color)",
+    },
+
+    "globals": {
+        "background": "var(darkpurple)",
+        "foreground": "var(foreground)",
+        // "invisibles": "",
+
+        // caret
+        "caret": "var(yellow)",
+        // "block_caret": "",
+        // "block_caret_border": "",
+        // "block_caret_underline": "",
+        // "block_caret_corner_style": "round",
+        // "block_caret_corner_radius": "3",
+        "line_highlight": "var(cursor-line)",
+
+        // accents
+        "misspelling": "var(red)",
+        "fold_marker": "var(yellow)",
+        // "minimap_border": "color(var(foreground) a(0.5))",
+        "accent": "var(purple)",
+
+        // css
+        // "popup_css": "",
+        // "phantom_css": "",
+        // "sheet_css": "",
+
+        // gutter
+        "gutter": "var(background)",
+        "gutter_foreground": "color(var(darkpurple2) l(- 30%))",
+        "gutter_foreground_highlight": "var(darkpurple2)",
+
+        // diff
+        // "line_diff_width": "",
+        // "line_diff_added": "",
+        // "line_diff_modified": "",
+        // "line_diff_deleted": "",
+
+        // selection
+        "selection": "var(visual-selection)",
+        "selection_border": "color(var(foreground) a(0.3))",
+        // "selection_foreground": "",
+        "selection_border_width": "1",
+        // "inactive_selection": "",
+        // "inactive_selection_border": "",
+        // "inactive_selection_foreground": "",
+        // "selection_corner_style": "",
+        // "selection_corner_radius": "",
+
+        // find
+        "highlight": "var(foreground)",
+        "find_highlight": "var(darkpurple2)",
+        "find_highlight_foreground": "var(foreground)",
+        // "scroll_highlight": "",
+        // "scroll_selected_highlight": "",
+
+        // rulers
+        "rulers": "var(darkpurple)",
+
+        // guides
+        "guide": "var(background)",
+        "active_guide": "var(darkpurple)",
+        "stack_guide": "var(background)",
+
+        // brackets
+        "brackets_options": "stippled_underline",
+        // "brackets_foreground": "",
+        "bracket_contents_options": "stippled_underline",
+        // "bracket_contents_foreground": "",
+
+        // tags
+        "tags_options": "stippled_underline",
+        // "tags_foreground": "",
+
+        // shadow
+        // "shadow": "",
+        // "shadow_width": "1",
+    },
+
+    "rules": [
+        // --> Comment
+        {
+            "name": "Comment",
+            "scope": "comment",
+            "foreground": "var(comment)",
+        },
+        {
+            "name": "Comment Line",
+            "scope": "comment.line",
+            "foreground": "var(comment-line)",
+        },
+        {
+            "name": "Comment Block",
+            "scope": "comment.block",
+            "foreground": "var(comment-block)",
+        },
+        {
+            "name": "Comment Block Documentation",
+            "scope": "comment.block.documentation",
+            "foreground": "var(comment-block-documentation)",
+        },
+        // <-- Comment
+        // --> Constant
+        {
+            "name": "Constant",
+            "scope": "constant",
+            "font_style": "",
+        },
+        {
+            "name": "Numbers",
+            "scope": "constant.numeric",
+            "foreground": "var(constant-numeric)",
+        },
+        {
+            "name": "Language Constant",
+            "scope": "constant.language",
+            "foreground": "var(constant-language)",
+        },
+        {
+            "name": "Character Escapes",
+            "scope": "constant.character.escape",
+            "foreground": "var(constant-character-escape)",
+        },
+        {
+            "name": "Formatting Placeholder",
+            "scope": "constant.other.placeholder",
+            "foreground": "var(constant-other-placeholder)",
+        },
+        {
+            "name": "Generic Constants",
+            "scope": "constant.other",
+            "foreground": "var(constant-other)",
+        },
+        // <-- Constant
+        // --> Entity
+        {
+            "name": "Entity Name",
+            "scope": "entity.name",
+            "foreground": "var(entity-name)",
+        },
+        {
+            "name": "Entity Name - Class",
+            "scope": "entity.name.class",
+            "foreground": "var(entity-name-class)",
+        },
+        {
+            "name": "Entity Name - Type",
+            "scope": "entity.name.type",
+            "foreground": "var(entity-name-type)",
+        },
+        {
+            "name": "Entity Name - Inherited",
+            "scope": "entity.other.inherited-class",
+            "foreground": "var(entity-other-inherited-class)",
+        },
+        {
+            "name": "Entity Name - Function",
+            "scope": "entity.name.function",
+            "foreground": "var(entity-name-function)",
+        },
+        {
+            "name": "Entity Name - Constructor",
+            "scope": "entity.name.function.constructor",
+            "foreground": "var(entity-name-function-constructor)",
+        },
+        {
+            "name": "Entity Name - Destructor",
+            "scope": "entity.name.function.destructor",
+            "foreground": "var(entity-name-function-destructor)",
+        },
+        {
+            "name": "Entity Name - Namespace",
+            "scope": "entity.name.namespace",
+            "foreground": "var(entity-name-namespace)",
+        },
+        {
+            "name": "Entity Name - Constant",
+            "scope": "entity.name.constant",
+            "foreground": "var(entity-name-constant)",
+        },
+        {
+            "name": "Entity Name - Label",
+            "scope": "entity.name.label",
+            "foreground": "var(entity-name-label)",
+        },
+        {
+            "name": "Entity Name - Section",
+            "scope": "entity.name.section",
+            "foreground": "var(entity-name-section)",
+        },
+        {
+            "name": "Entity Name - Tag",
+            "scope": "entity.name.tag",
+            "foreground": "var(entity-name-tag)",
+        },
+        {
+            "name": "Entity Name - Attribute Name",
+            "scope": "entity.other.attribute-name",
+            "foreground": "var(entity-other-attribute-name)",
+        },
+        // <-- Entity
+        // --> Invalid
+        {
+            "name": "Illegal",
+            "scope": "invalid.illegal",
+            "foreground": "var(invalid-illegal)",
+        },
+        {
+            "name": "Deprecated",
+            "scope": "invalid.deprecated",
+            "foreground": "var(invalid-deprecated)",
+        },
+        // <-- Invalid
+        // --> Keyword
+        {
+            "name": "Control Flow",
+            "scope": "keyword.control",
+            "foreground": "var(keyword-control)",
+        },
+        {
+            "name": "Conditional",
+            "scope": "keyword.control.conditional",
+            "foreground": "var(keyword-control-conditional)",
+        },
+        {
+            "name": "Exception",
+            "scope": "keyword.control.exception",
+            "foreground": "var(keyword-control-exception)",
+        },
+        {
+            "name": "Loop",
+            "scope": "keyword.control.loop",
+            "foreground": "var(keyword.control.loop)",
+        },
+        {
+            "name": "Imports",
+            "scope": "keyword.control.import",
+            "foreground": "var(keyword-control-import)",
+        },
+        {
+            "name": "Control Flow",
+            "scope": "keyword.control.flow",
+            "foreground": "var(keyword-control-flow)",
+        },
+        {
+            "name": "Other Keywords",
+            "scope": "keyword.other",
+            "foreground": "var(keyword-other)",
+        },
+        {
+            "name": "Keyword Operators",
+            "scope": "keyword.operator",
+            "foreground": "var(keyword-operator)",
+        },
+        {
+            "name": "Keyword Word Operators",
+            "scope": "keyword.operator.word",
+            "foreground": "var(keyword-operator-word)",
+        },
+        {
+            "name": "Keyword Declaration",
+            "scope": "keyword.declaration",
+            "foreground": "var(keyword-declaration)",
+        },
+        // <-- Keywords
+        // --> Markup
+        {
+            "name": "Markup Heading",
+            "scope": "markup.heading",
+            "foreground": "var(markup-heading)",
+        },
+        {
+            "name": "Markup List",
+            "scope": "markup.list",
+            "foreground": "var(markup-list)",
+        },
+        {
+            "name": "Markup Bold",
+            "scope": "markup.bold",
+            "foreground": "var(markup-bold)",
+            "font_style": "bold"
+        },
+        {
+            "name": "Markup Italic",
+            "scope": "markup.italic",
+            "foreground": "var(markup-italic)",
+            "font_style": "italic"
+        },
+        {
+            "name": "Markup Underline",
+            "scope": "markup.underline",
+            "foreground": "var(markup-underline)",
+            "font_style": "underline"
+        },
+        {
+            "name": "Markup Link",
+            "scope": "markup.underline.link",
+            "foreground": "var(markup-underline-link)",
+            "font_style": "underline"
+        },
+        {
+            "name": "Markup Inserted",
+            "scope": "markup.inserted",
+            "foreground": "var(markup-inserted)",
+        },
+        {
+            "name": "Markup Deleted",
+            "scope": "markup.deleted",
+            "foreground": "var(markup-deleted)",
+        },
+        {
+            "name": "Markup Quote",
+            "scope": "markup.quote",
+            "foreground": "var(markup-quote)",
+        },
+        {
+            "name": "Markup Raw",
+            "scope": "markup.raw",
+            "foreground": "var(markup-raw)",
+        },
+        {
+            "name": "Markup Other",
+            "scope": "markup.other",
+            "foreground": "var(markup-other)",
+        },
+        // <-- Markup
+        // --> Punctuation
+        {
+            "name": "Separator (Commas, Colons)",
+            "scope": "punctuation.separator",
+            "foreground": "var(punctuation-separator)",
+        },
+        {
+            "name": "Continuation",
+            "scope": "punctuation.separator.continuation",
+            "foreground": "var(punctuation-separator-continuation)",
+        },
+        {
+            "name": "Terminator (Semicolons)",
+            "scope": "punctuation.terminator",
+            "foreground": "var(punctuation-terminator)",
+        },
+        {
+            "name": "Accessor (dots, arrows, double colons)",
+            "scope": "punctuation.accessor",
+            "foreground": "var(punctuation-accessor)",
+        },
+        {
+            "name": "Generic",
+            "scope": "punctuation.definition.generic",
+            "foreground": "var(punctuation-definition-generic)",
+        },
+        {
+            "name": "String",
+            "scope": "meta.string punctuation.definition.string",
+            "foreground": "var(punctuation-definition-string)",
+        },
+        {
+            "name": "Punctuation Section",
+            "scope": "punctuation.section",
+            "foreground": "var(punctuation-section)",
+        },
+        {
+            "name": "Interpolation",
+            "scope": "punctuation.section.interpolation",
+            "foreground": "var(punctuation-section-interpolation)",
+        },
+        {
+            "name": "Braces",
+            "scope": "punctuation.section.braces",
+            "foreground": "var(punctuation-section-braces)",
+        },
+        {
+            "name": "Parenthesis",
+            "scope": "punctuation.section.parens",
+            "foreground": "var(punctuation-section-parens)",
+        },
+        {
+            "name": "Brackets",
+            "scope": "punctuation.section.brackets",
+            "foreground": "var(punctuation-section-brackets)",
+        },
+        {
+            "name": "Variable Punctuation",
+            "scope": "punctuation.definition.variable",
+            "foreground": "var(punctuation-definition-variable)",
+        },
+        {
+            "name": "Annotation Punctuation",
+            "scope": "punctuation.definition.annotation",
+            "foreground": "var(punctuation-definition-annotation)",
+        },
+        {
+            "name": "Comment Punctuation",
+            "scope": "punctuation.definition.comment",
+            "foreground": "var(punctuation-definition-comment)",
+        },
+        {
+            "name": "Keyword Punctuation",
+            "scope": "punctuation.definition.keyword",
+            "foreground": "var(punctuation-definition-keyword)",
+        },
+        // <-- Punctuation
+        // --> Storage
+        {
+            "name": "Storage Type (Data Type)",
+            "scope": "storage.type",
+            "foreground": "var(storage-type)",
+        },
+        {
+            "name": "Storage Modifier (Access Type)",
+            "scope": "storage.modifier",
+            "foreground": "var(storage-modifier)",
+        },
+        // <-- Storage
+        // --> String
+        {
+            "name": "String",
+            "scope": "string",
+            "foreground": "var(string)",
+        },
+        {
+            "name": "String",
+            "scope": "string.quoted",
+            "foreground": "var(string-quoted)",
+        },
+        {
+            "name": "Single Quotes",
+            "scope": "string.quoted.single",
+            "foreground": "var(string-quoted-single)",
+        },
+        {
+            "name": "Double Quotes",
+            "scope": "string.quoted.double",
+            "foreground": "var(string-quoted-double)",
+        },
+        {
+            "name": "Triple Quotes",
+            "scope": "string.quoted.triple",
+            "foreground": "var(string-quoted-triple)",
+        },
+        {
+            "name": "Generic Quotes",
+            "scope": "string.quoted.other",
+            "foreground": "var(string-quoted-other)",
+        },
+        {
+            "name": "Unquoted",
+            "scope": "string.unquoted",
+            "foreground": "var(string-unquoted)",
+        },
+        {
+            "name": "Regexp",
+            "scope": "string.regexp",
+            "foreground": "var(string-regexp)",
+        },
+        // <-- String
+        // --> Support
+        {
+            "name": "Support",
+            "scope": "support",
+            "foreground": "var(support)",
+        },
+        {
+            "name": "Support Constant",
+            "scope": "support.constant",
+            "foreground": "var(support-constant)",
+        },
+        {
+            "name": "Support Function",
+            "scope": "support.function",
+            "foreground": "var(support-function)",
+        },
+        {
+            "name": "Support Module",
+            "scope": "support.module",
+            "foreground": "var(support-module)",
+        },
+        {
+            "name": "Support Type",
+            "scope": "support.type",
+            "foreground": "var(support-type)",
+        },
+        {
+            "name": "Support Class",
+            "scope": "support.class",
+            "foreground": "var(support-class)",
+        },
+        // <-- Support
+        // --> Text
+        {
+            "name": "Text",
+            "scope": "text",
+            "foreground": "var(text)",
+        },
+        {
+            "name": "HTML",
+            "scope": "text.html",
+            "foreground": "var(text-html)",
+        },
+        {
+            "name": "XML",
+            "scope": "text.xml",
+            "foreground": "var(text-xml)",
+        },
+        // <-- Text
+        // --> Variable
+        {
+            "name": "Variable",
+            "scope": "variable.other",
+            "foreground": "var(variable-other)",
+        },
+        {
+            "name": "Constant",
+            "scope": "variable.other.constant",
+            "foreground": "var(variable-other-constant)",
+        },
+        {
+            "name": "Language Built-In Variables",
+            "scope": "variable.language",
+            "foreground": "var(variable-language)",
+        },
+        {
+            "name": "Function Parameters",
+            "scope": "variable.parameter",
+            "foreground": "var(variable-parameter)",
+        },
+        {
+            "name": "Class Fields/Properties",
+            "scope": "variable.other.member",
+            "foreground": "var(variable-other-member)",
+        },
+        {
+            "name": "Invoked/Called Function",
+            "scope": "variable.function",
+            "foreground": "var(variable-function)",
+        },
+        {
+            "name": "Annotation",
+            "scope": "variable.annotation",
+            "foreground": "var(variable-annotation)",
+            "font_style": "italic"
+        },
+        // <-- Variable
+
+        // Fixups
+        {
+            "name": "Regex Pattern Punctuations",
+            "scope": "string.regexp punctuation.definition.string",
+            "foreground": "var(string-regexp)",
+        },
+        {
+            "scope": "punctuation.definition.constant",
+            "foreground": "var(punctuation-definition-variable)",
+        },
+        {
+            "scope": "entity.name.variable",
+            "foreground": "var(entity-name-variable)",
+        },
+
+        // JS/TS
+        {
+            "name": "[js/ts] import",
+            "scope": "keyword.control.import-export",
+            "foreground": "var(keyword-control-import)",
+            "font_style": ""
+        },
+        {
+            "name": "[js/ts] For classes initiated with `new`",
+            "scope": "meta.function-call.constructor variable.type",
+            "foreground": "var(variable-function)",
+            "font_style": "italic"
+        },
+        {
+            "name": "[js/ts] extends & implements keywords",
+            "scope": "storage.modifier.extends | storage.modifier.implements",
+            "foreground": "var(keyword-declaration)",
+        },
+        {
+            "name": "[js/ts] Custom types",
+            "scope": "meta.type support.class",
+            "foreground": "var(support-type)",
+        },
+    ],
+}

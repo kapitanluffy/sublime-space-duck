@@ -1,0 +1,588 @@
+{
+  "variables": {
+    "foreground": "papayawhip",
+    "background": "color(dimgray blenda(black 15%))",
+    "accent": "darkorange",
+    "aliceblue": "aliceblue",
+    "antiquewhite": "antiquewhite",
+    "aqua": "aqua",
+    "aquamarine": "aquamarine",
+    "azure": "azure",
+    "beige": "beige",
+    "bisque": "bisque",
+    "black": "black",
+    "blanchedalmond": "blanchedalmond",
+    "blue": "blue",
+    "blueviolet": "blueviolet",
+    "brown": "brown",
+    "burlywood": "burlywood",
+    "cadetblue": "cadetblue",
+    "chartreuse": "chartreuse",
+    "chocolate": "chocolate",
+    "coral": "coral",
+    "cornflowerblue": "cornflowerblue",
+    "cornsilk": "cornsilk",
+    "crimson": "crimson",
+    "cyan": "cyan",
+    "darkblue": "darkblue",
+    "darkcyan": "darkcyan",
+    "darkgoldenrod": "darkgoldenrod",
+    "darkgray": "darkgray",
+    "darkgreen": "darkgreen",
+    "darkgrey": "darkgrey",
+    "darkkhaki": "darkkhaki",
+    "darkmagenta": "darkmagenta",
+    "darkolivegreen": "darkolivegreen",
+    "darkorange": "darkorange",
+    "darkorchid": "darkorchid",
+    "darkred": "darkred",
+    "darksalmon": "darksalmon",
+    "darkseagreen": "darkseagreen",
+    "darkslateblue": "darkslateblue",
+    "darkslategray": "darkslategray",
+    "darkslategrey": "darkslategrey",
+    "darkturquoise": "darkturquoise",
+    "darkviolet": "darkviolet",
+    "deeppink": "deeppink",
+    "deepskyblue": "deepskyblue",
+    "dimgray": "dimgray",
+    "dimgrey": "dimgrey",
+    "dodgerblue": "dodgerblue",
+    "firebrick": "firebrick",
+    "floralwhite": "floralwhite",
+    "forestgreen": "forestgreen",
+    "fuchsia": "fuchsia",
+    "gainsboro": "gainsboro",
+    "ghostwhite": "ghostwhite",
+    "gold": "gold",
+    "goldenrod": "goldenrod",
+    "gray": "gray",
+    "green": "green",
+    "greenyellow": "greenyellow",
+    "grey": "grey",
+    "honeydew": "honeydew",
+    "hotpink": "hotpink",
+    "indianred": "indianred",
+    "indigo": "indigo",
+    "ivory": "ivory",
+    "khaki": "khaki",
+    "lavender": "lavender",
+    "lavenderblush": "lavenderblush",
+    "lawngreen": "lawngreen",
+    "lemonchiffon": "lemonchiffon",
+    "lightblue": "lightblue",
+    "lightcoral": "lightcoral",
+    "lightcyan": "lightcyan",
+    "lightgoldenrodyellow": "lightgoldenrodyellow",
+    "lightgray": "lightgray",
+    "lightgreen": "lightgreen",
+    "lightgrey": "lightgrey",
+    "lightpink": "lightpink",
+    "lightsalmon": "lightsalmon",
+    "lightseagreen": "lightseagreen",
+    "lightskyblue": "lightskyblue",
+    "lightslategray": "lightslategray",
+    "lightslategrey": "lightslategrey",
+    "lightsteelblue": "lightsteelblue",
+    "lightyellow": "lightyellow",
+    "lime": "lime",
+    "limegreen": "limegreen",
+    "linen": "linen",
+    "magenta": "magenta",
+    "maroon": "maroon",
+    "mediumaquamarine": "mediumaquamarine",
+    "mediumblue": "mediumblue",
+    "mediumorchid": "mediumorchid",
+    "mediumpurple": "mediumpurple",
+    "mediumseagreen": "mediumseagreen",
+    "mediumslateblue": "mediumslateblue",
+    "mediumspringgreen": "mediumspringgreen",
+    "mediumturquoise": "mediumturquoise",
+    "mediumvioletred": "mediumvioletred",
+    "midnightblue": "midnightblue",
+    "mintcream": "mintcream",
+    "mistyrose": "mistyrose",
+    "moccasin": "moccasin",
+    "navajowhite": "navajowhite",
+    "navy": "navy",
+    "oldlace": "oldlace",
+    "olive": "olive",
+    "olivedrab": "olivedrab",
+    "orange": "orange",
+    "orangered": "orangered",
+    "orchid": "orchid",
+    "palegoldenrod": "palegoldenrod",
+    "palegreen": "palegreen",
+    "paleturquoise": "paleturquoise",
+    "palevioletred": "palevioletred",
+    "papayawhip": "papayawhip",
+    "peachpuff": "peachpuff",
+    "peru": "peru",
+    "pink": "pink",
+    "plum": "plum",
+    "powderblue": "powderblue",
+    "purple": "purple",
+    "rebeccapurple": "rebeccapurple",
+    "red": "red",
+    "rosybrown": "rosybrown",
+    "royalblue": "royalblue",
+    "saddlebrown": "saddlebrown",
+    "salmon": "salmon",
+    "sandybrown": "sandybrown",
+    "seagreen": "seagreen",
+    "seashell": "seashell",
+    "sienna": "sienna",
+    "silver": "silver",
+    "skyblue": "skyblue",
+    "slateblue": "slateblue",
+    "slategray": "slategray",
+    "slategrey": "slategrey",
+    "snow": "snow",
+    "springgreen": "springgreen",
+    "steelblue": "steelblue",
+    "tan": "tan",
+    "teal": "teal",
+    "thistle": "thistle",
+    "tomato": "tomato",
+    "turquoise": "turquoise",
+    "violet": "violet",
+    "wheat": "wheat",
+    "white": "white",
+    "whitesmoke": "whitesmoke",
+    "yellow": "yellow",
+    "yellowgreen": "yellowgreen",
+  },
+  "globals": {
+    "background": "color(dimgray blenda(black 15%))",
+    "foreground": "papayawhip",
+    "caret": "darkorange",
+    "line_highlight": "color(var(background) lightness(+ 5%))",
+    "misspelling": "red",
+    "accent": "darkorange",
+    "selection": "color(gray alpha(0.3))",
+    "selection_border": "dimgray",
+    "selection_border_width": "1",
+    "inactive_selection": "color(gray alpha(0.2))",
+    "highlight": "darkorange",
+    "find_highlight": "lightyellow",
+    "find_highlight_foreground": "grey",
+    "active_guide": "darkorange",
+    "stack_guide": "color(var(accent) alpha(0.2))",
+    "brackets_options": "underline",
+    "brackets_foreground": "darkorange",
+    "bracket_contents_options": "underline",
+    "tags_options": "stippled_underline",
+    "shadow": "black"
+  },
+  "rules": [
+    {
+      "name": "variable",
+      "scope": "variable",
+      "foreground": "papayawhip"
+    },
+    // {
+    //   "name": "variable",
+    //   "scope": "variable.other",
+    //   "foreground": "papayawhip"
+    // },
+    // {
+    //   "name": "variable",
+    //   "scope": "variable.other.readwrite",
+    //   "foreground": "papayawhip"
+    // },
+    {
+      "name": "variable_entity",
+      "scope": "entity.name.variable",
+      "foreground": "papayawhip"
+    },
+    {
+      "name": "variable_language",
+      "scope": "variable.language",
+      "foreground": "papayawhip"
+    },
+    {
+      "name": "constant",
+      "scope": "constant",
+      "foreground": "yellow"
+    },
+    {
+      "name": "constant",
+      "scope": "constant.other",
+      "foreground": "yellow"
+    },
+    {
+      "name": "constant",
+      "scope": "variable.other.constant",
+      "foreground": "yellow"
+    },
+    {
+      "name": "constant_entity",
+      "scope": "entity.name.constant",
+      "foreground": "yellow"
+    },
+    {
+      "name": "constant_language",
+      "scope": "constant.language",
+      "foreground": "yellow"
+    },
+    {
+      "name": "function",
+      "scope": "variable.function",
+      "foreground": "green"
+    },
+    {
+      "name": "function",
+      "scope": "meta.function-call",
+      "foreground": "green"
+    },
+    {
+      "name": "function_entity",
+      "scope": "entity.name.function",
+      "foreground": "green"
+    },
+    {
+      "name": "function_parameters",
+      "scope": "variable.parameter",
+      "foreground": "papayawhip"
+    },
+    {
+      "name": "class_entity",
+      "scope": "entity.name",
+      "foreground": "green"
+    },
+    {
+      "name": "class_entity",
+      "scope": "entity.name.class",
+      "foreground": "green"
+    },
+    {
+      "name": "class_inherited",
+      "scope": "entity.other.inherited-class",
+      "foreground": "papayawhip"
+    },
+    {
+      "name": "class_members",
+      "scope": "variable.other.member",
+      "foreground": "papayawhip"
+    },
+    {
+      "name": "annotation",
+      "scope": "variable.annotation",
+      "foreground": "papayawhip"
+    },
+    {
+      "name": "comment",
+      "scope": "comment",
+      "foreground": "gray"
+    },
+    {
+      "name": "comment",
+      "scope": "punctuation.definition.comment",
+      "foreground": "gray"
+    },
+    {
+      "name": "numeric",
+      "scope": "constant.numeric",
+      "foreground": "palevioletred"
+    },
+    {
+      "name": "numeric",
+      "scope": "punctuation.separator.decimal",
+      "foreground": "palevioletred"
+    },
+    {
+      "name": "string",
+      "scope": "string",
+      "foreground": "papayawhip"
+    },
+    {
+      "name": "string_character_escape",
+      "scope": "constant.character.escape",
+      "foreground": "papayawhip"
+    },
+    {
+      "name": "string_placeholder",
+      "scope": "constant.other.placeholder",
+      "foreground": "papayawhip"
+    },
+    {
+      "name": "string_quotes",
+      "scope": "meta.string punctuation.definition.string",
+      "foreground": "papayawhip"
+    },
+    {
+      "name": "string_regexp",
+      "scope": "string.regexp",
+      "foreground": "orange"
+    },
+    {
+      "name": "string_regexp",
+      "scope": "string.regexp punctuation.definition.string",
+      "foreground": "orange"
+    },
+    {
+      "name": "string_multiline",
+      "scope": "string.quoted.triple",
+      "foreground": "papayawhip"
+    },
+    {
+      "name": "string_continuation",
+      "scope": "punctuation.separator.continuation",
+      "foreground": "papayawhip"
+    },
+    {
+      "name": "string_interpolation",
+      "scope": "punctuation.section.interpolation",
+      "foreground": "papayawhip"
+    },
+    {
+      "name": "punctuation",
+      "scope": "punctuation",
+      "foreground": "mediumpurple"
+    },
+    {
+      "name": "separator",
+      "scope": "punctuation.separator",
+      "foreground": "mediumpurple"
+    },
+    {
+      "name": "accessor",
+      "scope": "punctuation.accessor",
+      "foreground": "mediumpurple"
+    },
+    {
+      "name": "terminator",
+      "scope": "punctuation.terminator",
+      "foreground": "mediumpurple"
+    },
+    {
+      "name": "brackets",
+      "scope": "punctuation.section.braces",
+      "foreground": "mediumpurple"
+    },
+    {
+      "name": "brackets",
+      "scope": "punctuation.section.brackets",
+      "foreground": "mediumpurple"
+    },
+    {
+      "name": "brackets",
+      "scope": "punctuation.section.parens",
+      "foreground": "mediumpurple"
+    },
+    {
+      "name": "operator",
+      "scope": "keyword.operator",
+      "foreground": "orange"
+    },
+    {
+      "name": "operator_word",
+      "scope": "keyword.operator.word",
+      "foreground": "palevioletred"
+    },
+    {
+      "name": "keyword",
+      "scope": "keyword",
+      "foreground": "violet"
+    },
+    {
+      "name": "keyword_symbol",
+      "scope": "punctuation.definition.annotation",
+      "foreground": "orange"
+    },
+    {
+      "name": "keyword_symbol",
+      "scope": "punctuation.definition.variable",
+      "foreground": "orange"
+    },
+    {
+      "name": "keyword_control",
+      "scope": "keyword.control",
+      "foreground": "violet"
+    },
+    {
+      "name": "keyword_flow",
+      "scope": "keyword.control.flow",
+      "foreground": "violet"
+    },
+    {
+      "name": "keyword_import",
+      "scope": "keyword.control.import",
+      "foreground": "violet"
+    },
+    {
+      "name": "keyword_import",
+      "scope": "keyword.import",
+      "foreground": "violet"
+    },
+    {
+      "name": "keyword_import",
+      "scope": "keyword.control.import-export",
+      "foreground": "violet"
+    },
+    {
+      "name": "keyword_declaration",
+      "scope": "keyword.declaration",
+      "foreground": "papayawhip"
+    },
+    {
+      "name": "storage_data_type",
+      "scope": "storage.type",
+      "foreground": "papayawhip"
+    },
+    {
+      "name": "storage_data_type",
+      "scope": "entity.name.type",
+      "foreground": "papayawhip"
+    },
+    {
+      "name": "storage_modifier",
+      "scope": "storage.modifier",
+      "foreground": "orange"
+    },
+    {
+      "name": "support",
+      "scope": "support",
+      "foreground": "yellow"
+    },
+    {
+      "name": "support_constant",
+      "scope": "support.constant",
+      "foreground": "yellow"
+    },
+    {
+      "name": "support_function",
+      "scope": "support.function",
+      "foreground": "green"
+    },
+    {
+      "name": "support_data_type",
+      "scope": "support.type",
+      "foreground": "papayawhip"
+    },
+    {
+      "name": "support_class",
+      "scope": "support.class",
+      "foreground": "yellow"
+    },
+    {
+      "name": "xml_text",
+      "scope": "text",
+      "foreground": "papayawhip"
+    },
+    {
+      "name": "xml_text",
+      "scope": "text.html",
+      "foreground": "papayawhip"
+    },
+    {
+      "name": "xml_text",
+      "scope": "text.xml",
+      "foreground": "papayawhip"
+    },
+    {
+      "name": "xml_tag",
+      "scope": "entity.name.tag",
+      "foreground": "green"
+    },
+    {
+      "name": "xml_attribute",
+      "scope": "entity.other.attribute-name",
+      "foreground": "orange"
+    },
+    {
+      "name": "markup",
+      "scope": "markup",
+      "foreground": "papayawhip"
+    },
+    {
+      "name": "markup_heading",
+      "scope": "markup.heading",
+      "foreground": "cyan"
+    },
+    {
+      "name": "markup_heading",
+      "scope": "entity.name.section",
+      "foreground": "cyan"
+    },
+    {
+      "name": "markup_list",
+      "scope": "markup.list",
+      "foreground": "violet"
+    },
+    {
+      "name": "markup_bold",
+      "scope": "markup.bold",
+      "foreground": "papayawhip",
+      "font_style": "bold"
+    },
+    {
+      "name": "markup_italic",
+      "scope": "markup.italic",
+      "foreground": "papayawhip",
+      "font_style": "italic"
+    },
+    {
+      "name": "markup_underline",
+      "scope": "markup.underline",
+      "foreground": "papayawhip",
+      "font_style": "underline"
+    },
+    {
+      "name": "markup_link",
+      "scope": "markup.underline.link",
+      "foreground": "papayawhip",
+      "font_style": "stippled_underline"
+    },
+    {
+      "name": "markup_inserted",
+      "scope": "markup.inserted",
+      "foreground": "green"
+    },
+    {
+      "name": "markup_inserted",
+      "scope": "punctuation.definition.inserted",
+      "foreground": "green"
+    },
+    {
+      "name": "markup_deleted",
+      "scope": "markup.deleted",
+      "foreground": "red"
+    },
+    {
+      "name": "markup_deleted",
+      "scope": "punctuation.definition.deleted",
+      "foreground": "red"
+    },
+    {
+      "name": "markup_info",
+      "scope": "markup.info",
+      "foreground": "blue"
+    },
+    {
+      "name": "markup_quote",
+      "scope": "markup.quote",
+      "foreground": "lightgray"
+    },
+    {
+      "name": "markup_raw",
+      "scope": "markup.raw",
+      "foreground": "lightgray"
+    },
+    {
+      "name": "markup_warning",
+      "scope": "markup.warning",
+      "foreground": "yellow"
+    },
+    {
+      "name": "markup_error",
+      "scope": "markup.error",
+      "foreground": "red"
+    },
+    {
+      "name": "invalid",
+      "scope": "invalid",
+      "foreground": "red"
+    }
+  ]
+}

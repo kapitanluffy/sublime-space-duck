@@ -1,0 +1,561 @@
+{
+    "extends": "Adaptive.sublime-theme",
+    "variables": {
+        // palette
+        "red":   "#e33400",
+        "orange": "#e39400",
+        "yellow":"#f2ce00",
+        "cyan":  "#00a3cc",
+        "green": "#5ccc96",
+        "purple":"#b3a1e6",
+        "purple2":"#7a5ccc",
+        "magenta":  "#ce6f8f",
+        "darkpurple":"#30365F",
+        "darkpurple2":"#686f9a",
+        // additionals
+        "background": "#0f111b",
+        "foreground": "#ecf0c1",
+        "visual-selection": "#1b1c36",
+        "cursor-line": "#16172d",
+        "grey": "#818596",
+        "grey2": "#c1c3cc",
+        "white": "#ffffff",
+        "black": "#000000",
+    },
+    "rules": [
+        // Window
+        {
+            "class": "title_bar",
+            // "bg": "color(var(background) l(- 3.5%))",
+        },
+        {
+            "class": "window",
+        },
+        {
+            "class": "edit_window",
+        },
+        {
+            "class": "switch_project_window",
+        },
+        // Sidebar
+        {
+            "class": "sidebar_container",
+        },
+        {
+            "class": "sidebar_tree",
+        },
+        // Sidebar Highlight
+        {
+            "class": "tree_row",
+            "attributes": ["selected"],
+            "layer0.tint": "color(var(darkpurple) a(0.6))",
+        },
+        // Sidebar Highlight Hover
+        {
+            "class": "tree_row",
+            "attributes": ["!selected"],
+            "layer0.tint": "var(cursor-line)",
+        },
+        // Sidebar Headings
+        {
+            "class": "sidebar_heading",
+            "case": "upper",
+            "font.bold": false,
+            "font.size": "10px",
+            "color": "var(darkpurple)",
+        },
+        {
+            "class": "file_system_entry",
+        },
+        // Sidebar Items
+        {
+            "class": "sidebar_label",
+            "font.face": "Monospace",
+            "color": "var(foreground)",
+            "font.size": "11px",
+        },
+        // Hovered Items
+        {
+            "class": "sidebar_label",
+            "parents": [{
+                "class": "tree_row",
+                "attributes": ["hover"],
+            }],
+            "color": "color(var(yellow) l(+ 30%))",
+        },
+        // Selected Items
+        {
+            "class": "sidebar_label",
+            "parents": [{
+                "class": "tree_row",
+                "attributes": ["selected"],
+            }],
+            "color": "color(var(yellow) l(+ 30%))",
+        },
+        // Unhovered Items
+        {
+            "class": "sidebar_label",
+            "parents": [{
+                "class": "tree_row",
+                "attributes": ["!hover", "!selected"],
+            }],
+            "color": "color(var(foreground))",
+        },
+        // Open Folders
+        {
+            "class": "sidebar_label",
+            "parents": [{
+                "class": "tree_row",
+                "attributes": ["expanded", "expandable"],
+            }],
+            "font.bold": false,
+            "font.size": "12px",
+        },
+        // Closed Folders
+        {
+            "class": "sidebar_label",
+            "parents": [{
+                "class": "tree_row",
+                "attributes": ["!expanded", "expandable"],
+            }],
+            "font.bold": true,
+        },
+        {
+            "class": "close_button",
+        },
+        {
+            "class": "disclosure_button_control",
+        },
+        {
+            "class": "icon_folder",
+        },
+        {
+            "class": "icon_folder_loading",
+        },
+        {
+            "class": "icon_folder_dup",
+        },
+        {
+            "class": "icon_file_type",
+        },
+        {
+            "class": "vcs_status_badge",
+        },
+        // Tabs
+        // layer.0 = Background
+        // layer.1 = ???
+        // layer.2 = Accent
+        // layer.3 = Sides
+        {
+            "class": "tabset_control",
+            "tab_overlap": 10,
+            "layer3.opacity": 0,
+        },
+        // Active view with multiple tabs
+        {
+            "class": "tab_control",
+            "attributes": ["multiple", "!highlighted", "selected"],
+            "layer2.tint": "var(purple)",
+            "layer2.opacity": 0.5,
+        },
+        // Highlighted Tab
+        {
+            "class": "tab_control",
+            "attributes": ["highlighted"],
+        },
+        // Transient (Preview) Tab
+        {
+            "class": "tab_control",
+            "attributes": ["transient"],
+            "layer2.tint": "var(grey2)",
+            "layer2.opacity": 0.3,
+        },
+        // Modified Tab (Background)
+        {
+            "class": "tab_control",
+            "attributes": ["dirty", "!highlighted"],
+            "layer2.tint": "var(purple)",
+            "layer2.opacity": 0.5,
+        },
+        // Modified Tab (Selected)
+        {
+            "class": "tab_control",
+            "attributes": ["dirty", "highlighted"],
+            "layer2.tint": "var(purple)",
+            "layer2.opacity": 1,
+        },
+        // Tab Labels
+        {
+            "class": "tab_label",
+            "opacity": 0.2,
+            "color": "var(foreground)",
+        },
+        // Tab Label Highlighted
+        {
+            "class": "tab_label",
+            "parents": [{
+                "class": "tab_control",
+                "attributes": ["highlighted"]
+            }],
+            "color": "color(var(yellow) l(+ 30%))",
+            "opacity": 1
+        },
+        // Tab Label Hover
+        {
+            "class": "tab_label",
+            "parents": [{
+                "class": "tab_control",
+                "attributes": ["hover"]
+            }],
+            "color": "color(var(yellow) l(+ 30%))",
+            "opacity": 1
+        },
+        // Tab Label Multiple Highlighted
+        {
+            "class": "tab_label",
+            "parents": [{
+                "class": "tab_control",
+                "attributes": ["multiple", "highlighted"]
+            }],
+            "opacity": 1
+        },
+         // Tab Label Multiple
+        {
+            "class": "tab_label",
+            "parents": [{
+                "class": "tab_control",
+                "attributes": ["multiple", "selected", "!highlighted"]
+            }],
+            "opacity": 0.5
+        },
+         // Tab Label Members in Multiple View
+        {
+            "class": "tab_label",
+            "parents": [{
+                "class": "tab_control",
+                "attributes": ["!highlighted", "left_of_selected", "multiple"]
+            }],
+            "opacity": 0.4,
+            "font.italic": true,
+        },
+        {
+            "class": "tab_label",
+            "parents": [{
+                "class": "tab_control",
+                "attributes": ["!highlighted", "right_of_selected", "multiple"]
+            }],
+            "opacity": 0.4,
+            "font.italic": true,
+        },
+        {
+            "class": "tab_close_button",
+        },
+        {
+            "class": "scroll_tabs_left_button",
+            "layer0.tint": "color(var(darkpurple2))",
+        },
+        {
+            "class": "scroll_tabs_right_button",
+            "layer0.tint": "color(var(darkpurple2))",
+        },
+        {
+            "class": "show_tabs_dropdown_button",
+            "layer0.tint": "color(var(darkpurple2))",
+        },
+        {
+            "class": "tab_connector",
+        },
+        // Quick Panel
+        {
+            "class": "overlay_control",
+            // "layer0.tint": "var(background)",
+        },
+        {
+            "class": "quick_panel",
+            // "layer0.tint": "var(background)",
+        },
+        {
+            "class": "mini_quick_panel_row",
+            "layer0.tint": "var(purple2)",
+        },
+        {
+            "class": "quick_panel_row",
+            "layer0.tint": "var(purple2)",
+        },
+        {
+            "class": "quick_panel_entry",
+        },
+        {
+            "class": "kind_container",
+        },
+        {
+            "class": "kind_label",
+        },
+        {
+            "class": "symbol_container",
+        },
+        {
+            "class": "quick_panel_label",
+            "selected_fg": "var(foreground)",
+            "selected_match_fg": "color(var(yellow) l(+ 20%))",
+        },
+        {
+            "class": "quick_panel_path_label",
+        },
+        {
+            "class": "quick_panel_label key_binding",
+        },
+        {
+            "class": "quick_panel_label hint",
+        },
+        {
+            "class": "quick_panel_detail_label",
+        },
+        // Sheets
+        {
+            "class": "sheet_contents",
+        },
+        // Views
+        {
+            "class": "text_area_control",
+        },
+        {
+            "class": "grid_layout_control",
+            "border_color": "var(darkpurple2)",
+            "border_size": 1,
+        },
+        {
+            "class": "minimap_control",
+
+        },
+        {
+            "class": "fold_button_control",
+            "layer0.tint": "color(var(darkpurple2) l(+ 10%))",
+        },
+        {
+            "class": "popup_shadow",
+        },
+        {
+            "class": "popup_control html_popup",
+        },
+        {
+            "class": "popup_control annotation_popup",
+        },
+        {
+            "class": "annotation_close_button",
+        },
+        // Autocomplete
+        {
+            "class": "popup_control auto_complete_popup",
+        },
+        {
+            "class": "auto_complete",
+        },
+        {
+            "class": "table_row",
+        },
+        {
+            "class": "kind_container",
+        },
+        {
+            "class": "kind_label",
+        },
+        {
+            "class": "trigger_container",
+        },
+        {
+            "class": "auto_complete_label",
+        },
+        {
+            "class": "auto_complete_label auto_complete_hint",
+        },
+        {
+            "class": "auto_complete_detail_pane",
+        },
+        {
+            "class": "auto_complete_info",
+        },
+        {
+            "class": "auto_complete_kind_name_label",
+            "color": "var(foreground)",
+        },
+        {
+            "class": "auto_complete_details",
+            "color": "var(foreground)",
+        },
+        // Panels
+        {
+            "class": "panel_control",
+            "layer0.tint": "color(var(cursor-line) l(+ 0%))",
+            "layer0.opacity": 1,
+        },
+        {
+            "class": "panel_control find_panel",
+            // "layer0.tint": "var(cursor-line)",
+        },
+        {
+            "class": "panel_control replace_panel",
+            // "layer0.tint": "var(cursor-line)",
+        },
+        {
+            "class": "panel_control find_in_files_panel",
+            // "layer0.tint": "var(cursor-line)",
+            // "layer3.tint": "var(red)",
+            // "layer3.opacity": 1,
+        },
+        {
+            "class": "panel_control input_panel",
+        },
+        {
+            "class": "panel_control console_panel",
+        },
+        {
+            "class": "panel_control output_panel",
+            // "layer0.tint": "var(cursor-line)",
+        },
+        {
+            "class": "panel_control switch_project_panel",
+            // "layer0.tint": "var(cursor-line)",
+        },
+        {
+            "class": "panel_grid_control",
+            "inside_spacing": 4,
+            "outside_vspacing": 2,
+            "outside_hspacing": 1,
+        },
+        {
+            "class": "panel_close_button",
+        },
+        // Status Bar
+        {
+            "class": "status_bar",
+        },
+        {
+            "class": "sidebar_button_control",
+        },
+        {
+            "class": "status_container",
+        },
+        {
+            "class": "status_button",
+        },
+        {
+            "class": "vcs_status",
+        },
+        {
+            "class": "vcs_branch_icon",
+        },
+        {
+            "class": "vcs_changes_annotation",
+        },
+        // Dialogs
+        {
+            "class": "dialog",
+        },
+        {
+            "class": "progress_bar_control",
+        },
+        {
+            "class": "progress_gauge_control",
+        },
+        // Scrollbars
+        {
+            "class": "scroll_area_control",
+        },
+        {
+            "class": "scroll_bar_control",
+        },
+        {
+            "class": "scroll_track_control",
+        },
+        {
+            "class": "scroll_corner_control",
+        },
+        {
+            "class": "puck_control",
+        },
+        // Inputs
+        {
+            "class": "text_line_control",
+        },
+        {
+            "class": "text_line_control",
+            // "parents": [{
+            //     "class": "find_panel"
+            // }],
+            "content_margin": 4,
+            "color_scheme_tint": "var(darkpurple)",
+            // "color_scheme_tint_2": "color(var(red) a(0.1))",
+        },
+        {
+            "class": "dropdown_button_control",
+        },
+        // Buttons
+        {
+            "class": "button_control",
+        },
+        {
+            "class": "icon_button_group",
+        },
+        {
+            "class": "icon_button_control",
+        },
+        {
+            "class": "icon_regex",
+        },
+        {
+            "class": "icon_case",
+        },
+        {
+            "class": "icon_whole_word",
+        },
+        {
+            "class": "icon_wrap",
+        },
+        {
+            "class": "icon_in_selection",
+        },
+        {
+            "class": "icon_highlight",
+        },
+        {
+            "class": "icon_preserve_case",
+        },
+        {
+            "class": "icon_context",
+        },
+        {
+            "class": "icon_use_buffer",
+        },
+        {
+            "class": "icon_use_gitignore",
+        },
+        // Labels
+        {
+            "class": "label_control",
+            "parents": [{
+                "class": "find_panel"
+            }],
+            "color": "var(foreground)",
+            "font.size": "10px"
+        },
+        {
+            "class": "label_control",
+            "parents": [{
+                "class": "find_in_files_panel"
+            }],
+            "color": "var(foreground)",
+            "font.size": "10px"
+        },
+        {
+            "class": "title_label_control",
+        },
+        // Tooltips
+        {
+            "class": "tool_tip_control",
+        },
+        {
+            "class": "tool_tip_label_control",
+        },
+    ]
+}
